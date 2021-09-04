@@ -1,4 +1,4 @@
-package com.example.testSql;
+package com.example.testSql.controllers;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
