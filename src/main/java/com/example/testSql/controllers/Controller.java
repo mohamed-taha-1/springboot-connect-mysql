@@ -13,6 +13,7 @@ public class Controller {
     JdbcTemplate jdbc;
 
 
+
   @RequestMapping("/insert")
     public String index(){
       jdbc.execute("insert into student (Fname , email) values ('mohamed','ta@gmail.com')");
