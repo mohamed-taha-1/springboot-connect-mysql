@@ -72,5 +72,32 @@
         <button type="submit">Login</button>
 
 </form>
+
+
+<form action="deleteData" method="post">
+    <label>Enter Id: </label>
+    <input type="text" name="id"><br>
+    <input type="submit" value="delete">
+
+</form>
+
+<br>
+<br>
+<form action="UpdateData" method="post">
+    <h1>Update Form</h1>
+    <div class="form-container">
+        <hr/>
+        <div class="container">
+            <label for="uname"><strong>Username</strong></label>
+            <input type="text" placeholder="Enter Username" name="fname" required>
+            <label for="psw"><strong>email</strong></label>
+            <input type="email" placeholder="Enter email " name="email" required>
+        </div>
+        <button type="submit">update</button>
+
+</form>
+
+
+
 </body>
 </html>

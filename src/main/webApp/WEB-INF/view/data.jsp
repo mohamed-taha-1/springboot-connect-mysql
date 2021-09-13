@@ -16,5 +16,6 @@
     }
 
   %>
+<a href="/"> got to home page </a>
 </body>
 </html>

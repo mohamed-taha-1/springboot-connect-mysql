@@ -5,6 +5,7 @@ import com.example.testSql.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.example.testSql.repository.useDataRepo;
@@ -21,7 +22,7 @@ public class WebController {
         @ResponseBody
         public String saveDate(User user){
          repo.save(user);
-        return "data";
+        return "success";
         }
 
         @RequestMapping("/ShowData")
@@ -31,6 +32,26 @@ public class WebController {
            mv.addObject("data",dataList);
            mv.setViewName("data");
             return mv;
+        }
+
+        @RequestMapping("/deleteData")
+    public ModelAndView deleteData(@RequestParam("id") int id){
+            repo.deleteById(id);
+            ModelAndView mv=new ModelAndView();
+            List<User> dataList= repo.findAll();
+            mv.addObject("data",dataList);
+            mv.setViewName("data");
+            return mv;
+        }
+
+
+        @RequestMapping("/UpdateData")
+        @ResponseBody
+    public  String updateData(User user){
+            User myUpdated=repo.findAllByEmail(user.getEmail());
+            myUpdated.setFname(user.getFname());
+            repo.save(myUpdated);
+            return "success";
         }
 
   }
