@@ -18,6 +18,9 @@ public class User {
         Fname = fname;
         this.email = email;
     }
+    public User() {
+        super();
+    }
 
     public int getId() {
         return id;
@@ -38,6 +41,8 @@ public class User {
     public String getEmail() {
         return email;
     }
+
+
 
     public void setEmail(String email) {
         this.email = email;
