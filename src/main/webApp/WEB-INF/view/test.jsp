@@ -98,6 +98,8 @@
 </form>
 
 
+<a href="/LogPage">login</a>
+
 
 </body>
 </html>
